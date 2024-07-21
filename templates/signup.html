@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    {% if errors %}
+                <div class="alert alert-danger">
+                    <p style="color: red;">Password does not meet the following requirements:</p>
+                    <ul>
+                        {% for error in errors %}
+                            <li style="color: red;">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}   
+    <form method="POST" action="/signup">
+        <h4>Register</h4>
+        <input placeholder="First Name" type="text" name="first_name" required>
+        <input placeholder="Last Name" type="text" name="last_name" required><br><br>
+        <input placeholder="Email Address" type="email" name="email" required><br><br>
+        <input placeholder="Password" type="password" name="password" required><br><br>
+        <input placeholder="Confirm Password" type="password" name="confirm_password" required><br><br>
+        <button type="submit" style="background-color:lightgreen;">Register Now</button>
+    </form>
+    <p>Already have an account? <a href="/">Sign In</a></p>
+</body>
+</html>
