@@ -1,3 +1,5 @@
+# Used ChatGPT for Configuring Flask App for SQLAlchemy
+# Used ChatGPT for handling errors in flask
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
